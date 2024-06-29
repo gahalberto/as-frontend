@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend of Santa Secret - Amigo Secreto 🎅🎁
+
+This is a [Next.js](https://nextjs.org/) project created for the frontend of Santa Secret - Amigo Secreto.
+
+## Project Overview
+
+The project aims to provide a frontend interface for the existing Santa Secret backend. Users can search their CPF (Brazilian national ID) to find their matched secret friend in the game.
+
+### Technologies Used
+
+- **ReactJS**
+- **Next.js**
+- **Axios**
+- **Next Navigation**
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository and navigate to the project directory:
 
 ```bash
+git clone <repo-url>
+cd <project-folder>
+
+````
+Install dependencies:
+
+```
+npm install
+# or
+yarn install
+````
+Run the development server:
+```
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+````
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployment
+The project is deployed on Vercel and is available at https://as-frontend-vert.vercel.app/event/4.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Learn More
+To learn more about Next.js, check out the Next.js Documentation.
 
-## Learn More
+You can also take the Learn Next.js tutorial for an interactive guide.
 
-To learn more about Next.js, take a look at the following resources:
+Created by Gabriel Alberto 👨‍💻
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Explanation:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Deployment**: Added a section specifying that the project is deployed on Vercel and provided a direct link to the deployed application (`https://as-frontend-vert.vercel.app/event/4`).
+  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
