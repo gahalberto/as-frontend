@@ -1,0 +1,1 @@
+export type ModalScreen = null | 'add' | 'edit';
