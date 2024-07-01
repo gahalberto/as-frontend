@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Event as CustomEvent } from '@/types/Event';
+import { Event } from '@/types/Event';
 import * as api from '@/api/admin';
 import { EventItem, EventItemNotFound, EventItemPlaceholder } from "./events/EventItem";
 import { ItemButton } from "./ItemButton";
@@ -12,20 +12,26 @@ import { EventAdd } from "./events/EventAdd";
 import { EventEdit } from "./events/EventEdit";
 
 export const AdminPage = () => {
-    const [events, setEvents] = useState<CustomEvent[]>([]);
+    const [events, setEvents] = useState<Event[]>([]);
     const [loading, setLoading] = useState(true);
     const [modalScreen, setModalScreen] = useState<ModalScreen>(null);
-    const [selectedEvent, setSelectedEvent] = useState<CustomEvent>();
+    const [selectedEvent, setSelectedEvent] = useState<Event>();
 
     const loadEvents = async () => {
         setModalScreen(null);
         setLoading(true);
-        const eventList = await api.getEvents();
-        setLoading(false);
-        setEvents(eventList);
+        try {
+            const eventList = await api.getEvents();
+            setEvents(Array.isArray(eventList) ? eventList : []);
+        } catch (error) {
+            console.error("Failed to load events:", error);
+            setEvents([]);
+        } finally {
+            setLoading(false);
+        }
     }
 
-    const editEvent = (event: CustomEvent) => {
+    const editEvent = (event: Event) => {
         setSelectedEvent(event);
         setModalScreen('edit');
     }
