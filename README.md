@@ -1,6 +1,7 @@
 # Frontend of Santa Secret - Amigo Secreto 🎅🎁
 
-This is a [Next.js](https://nextjs.org/) project created for the frontend of Santa Secret - Amigo Secreto.
+The objective of this project is to create the frontend for the admin panel of the Santa Secret - Secret Santa game. This panel allows users to search their CPF (Brazilian national ID) and find the person they were matched with in the secret santa game.
+  This is a [Next.js](https://nextjs.org/) project created for the frontend of Santa Secret - Amigo Secreto.
 
 ## Project Overview
 
